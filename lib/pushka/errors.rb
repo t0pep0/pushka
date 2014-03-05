@@ -1,6 +1,6 @@
 module Pushka
 
-	class Error < StandartError; end
+	class Error < StandardError; end
 	class UnknownPlatform < Error; end
 	class DeviceNotAdded < Error; end
 	class DeviceNotDestroyed < Error; end
