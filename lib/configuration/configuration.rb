@@ -12,7 +12,7 @@ module Pushka
 
 	class Configuration
 		attr_accessor :device_model,
-			:token_column, :platform_column,
+			:token_column, :device_platform_column,
 			:push_model, :message_column, :sound_column,
 			:send_at_column, :queued_at_column,
 			:device_embed, :apn_certificate_path, :gcm_api_key,
