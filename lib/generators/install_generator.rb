@@ -1,4 +1,4 @@
-require 'rails/generator'
+require 'rails/generators'
 
 module Pushka
 	class InstallGenerator < Rails::Generators::Base
