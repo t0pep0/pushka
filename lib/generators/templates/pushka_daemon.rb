@@ -1,5 +1,5 @@
 require File.dirname(__FILE__) + '/../config/boot'
-require RAILS_ROOT + '/config/environment'
+require File.dirname(__FILE__) + '/../config/environment'
 
 logger = RAILS_DEFAULT_LOGGER
 
