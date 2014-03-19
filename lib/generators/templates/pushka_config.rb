@@ -11,7 +11,7 @@ Pushka.configure do |config|
 
 	config.device_model = Device #Model where stored devices
 		config.token_column = 'token' #name of column in device model where stored token (column must have a type String)
-		config.device_platform_token = 'platform' #name of column in device model where stored platform of device
+		config.device_platform_column = 'platform' #name of column in device model where stored platform of device
 
 	config.push_model = Push #model for push queue
 		config.message_column = 'message' #name of column in push model where message text stored
