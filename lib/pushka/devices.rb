@@ -22,7 +22,7 @@ module Pushka
 		end
 
 		def self.platform_column
-			Pushka.configuration.platform_column.to_s
+			Pushka.configuration.device_platform_column.to_s
 		end
 
 		def self.add_device(token, platform, options)
