@@ -7,17 +7,17 @@ logger = RAILS_DEFAULT_LOGGER
 @android_pusher = GCM.new(Pushka.configuration.gcm_api_key) if Pushka.configuration.gcm #Read https://github.com/spacialdb/gcm for more details
 
 loop do
-	pushs = Pushka::Queue.get_unsended_push
-	pushs.each do |push|
-		case push.platform
-		when 'Android'
-			@android_pusher.send_notification(push.token, push.to_notification)
-		when 'iOS'
-			notify = Grocer::Notification.new(push.to_notification)
-			@ios_pusher.push(notify)
-		end
-		Pushka::Queue.mark_push
-	end
-	sleep(Pushka.configuration.time_interval)
+  pushs = Pushka::Queue.get_unsended_push
+  pushs.each do |push|
+    case push.platform
+    when 'Android'
+      @android_pusher.send_notification(push.token, push.to_notification)
+    when 'iOS'
+      notify = Grocer::Notification.new(push.to_notification)
+      @ios_pusher.push(notify)
+    end
+    Pushka::Queue.mark_push
+  end
+  sleep(Pushka.configuration.time_interval)
 end
 
